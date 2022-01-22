@@ -2,15 +2,6 @@ This repo contains integration tests for the `artifct-lubc-sc` repo's smart cont
 
 This repo should live locally in the same parent directory as the `artifct-lubc-sc`.
 
-## Init (only done once)
-
-First create the wallets and get the protocol parameters.
-
-```
-$ ./scripts/wallets/make-all-wallets.sh
-$ ./scripts/query-protocol-parameters.sh
-```
-
 
 ## Creating the Script Address
 
@@ -32,6 +23,13 @@ $ source scripts/envars/mainnet-env.envvars
 
 The environment variable files set `CARDANO_NODE_SOCKET_PATH` to the path of the appropriate Daedalus socket file (either Testnet Daedalus or the regular mainnet Daedalus). It you run a `cardano-node` on your own you should set this environment variable to your socket file location after sourcing the environment variable file.
 
+First create the wallets and get the protocol parameters.
+
+```
+$ ./scripts/wallets/make-all-wallets.sh
+$ ./scripts/query-protocol-parameters.sh
+```
+
 Next, run:
 
 ```bash
@@ -39,6 +37,7 @@ scripts/compile.sh
 ```
 
 This will make the files `testnet/artifct-lbuc.addr` or `mainnet/artifct-lbuc.addr`.
+
 
 # Running the tests
 
