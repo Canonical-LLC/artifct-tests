@@ -25,3 +25,6 @@ if [ $detected == false ]; then
   $baseDir/wait/until-next-block.sh
   exit 1
 fi
+
+$baseDir/scratch/buyer-to-seller-utxo.sh
+$baseDir/wait/until-next-block.sh
