@@ -2,6 +2,7 @@ set -eux
 
 thisDir=$(dirname "$0")
 
+$thisDir/missing-royalty.sh
 $thisDir/lock-cancel.sh
 $thisDir/lock-swap.sh
 $thisDir/lock-high-royalty-swap.sh
